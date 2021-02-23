@@ -31,7 +31,7 @@ app.post('/', async (req,res) =>{
 
 async function takeScreenshot(url) {
 	const browser = await puppeteer.launch({
-		args: ['--no-sandbox']
+		args: ['--no-sandbox'],ignoreDefaultArgs: ['--disable-extensions']
 	});
     const page = await browser.newPage();
 	 await page.setViewport({
