@@ -23,6 +23,7 @@ app.post('/', async (req,res) =>{
     })
     .catch((err) => {
         console.log("Error occured!");
+		console.log(err);
         res.status(500).json(err);
     });
     
